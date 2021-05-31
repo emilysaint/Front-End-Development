@@ -1,0 +1,153 @@
+### EMILY SAINT
+### EX0201 - simple HTML
+
+## CODE TO CREATE HTML FILE
+## I did this because I had a hard time using TextEdit on my MacBook
+
+text = '''
+<!DOCTYPE html>
+<html>
+
+<title>saint_emily_htmlExercise.html</title>
+<style>
+body,h1 {font-family: "Raleway", Arial, sans-serif}
+
+h1 {
+letter-spacing: 6px;
+text-transform: uppercase;
+}
+
+h2 {
+text-align: center;
+letter-spacing: 4px;
+text-transform: lowecase;
+}
+
+.w3-row-padding img {margin-bottom: 12px}
+</style>
+<body>
+
+<div class="w3-content" style="max-width:1500px">
+
+<header class="w3-panel w3-center" style="padding:128px 16px">
+    <h2>Emily Saint</h1>
+  <h1>EX0201</h1>
+
+<head>
+<style>
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+p {
+  text-align: justify;
+  letter-spacing: 3px;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+
+h2{
+   font-weight: bold;
+   color: #000000;
+}
+
+}
+</style>
+</head>
+<body>
+
+<div>
+  <h1>Simple HTML Exercise</h1>
+  <h2>Of </h2>
+  <p> course, you will want to view your html as a rendered web page as you go along (so you can check your work).</a></p>
+  <h2>All </h2>
+  <p> you have to do is to open your html page in Chrome.</a></p>
+  <h2>On</h2>
+  <p> a windows machine using Chrome, Ctl-o will open a</a></p>
+  <h2>dialog</p>
+  <p> box from which you can select your .html page.</a></p>
+  <p> </a></p>
+</div>
+
+
+
+
+
+
+
+
+<head>
+<style>
+
+</style>
+</head>
+<body>
+
+<h1>a list:</h1>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+
+
+
+
+
+
+
+
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Course Table</h1>
+
+<table>
+  <tr>
+    <th>Quad</th>
+    <th>Courses</th>
+  </tr>
+  <tr>
+    <td>Quad 1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Quad 2</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Quad 3</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Quad 4</td>
+    <td></td>
+  </tr>
+</table>
+
+</body>
+</html>
+'''
+
+
+file = open("saint_emily_htmlExercise.html","w")
+file.write(text)
+file.close()
