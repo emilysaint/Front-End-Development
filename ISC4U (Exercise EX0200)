@@ -1,0 +1,52 @@
+# EMILY SAINT
+# EX0200
+# Intro to Web Scraping
+
+from bs4 import BeautifulSoup
+from urllib.request import urlopen
+
+import ssl
+
+# This restores the same behavior as before.
+context = ssl._create_unverified_context()
+
+textList = []
+
+number = 0
+for rumber in range(20):
+    url = "https://ottawa.craigslist.org/d/for-sale/search/sss?s=" + str(number)
+    r = urlopen(url, context=context).read()
+    soup = BeautifulSoup(r, features="html.parser")
+
+    text = soup.get_text()
+    if "no results" in text:
+        print("      DONE ")
+        break
+    else:
+        print (type(soup))
+        text = (soup.prettify()[0:1000])
+        textList.append(text)
+        print (text)
+    number += 1
+
+## I HAD TROUBLE IMPLEMENTING THE EMAIL
+##
+##import smtplib
+##from email.mime.multipart import MIMEMultipart
+## 
+##fromaddr = " ENTER EMAIL "
+##toaddr = " ENTER EMAIL "
+##msg = MIMEMultipart()
+##msg['From'] = fromaddr
+##msg['To'] = toaddr
+##msg['Subject'] = "SUBJECT OF THE MAIL"
+## 
+##body = str(textList)
+##msg.attach(MIMEMultipart(body, 'plain'))
+## 
+##server = smtplib.SMTP('smtp.gmail.com', 587)
+##server.starttls()
+##server.login(fromaddr, " PASSWORD ")
+##text = msg.as_string()
+##server.sendmail(fromaddr, toaddr, text)
+##server.quit()
